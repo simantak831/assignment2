@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+<head>
+  <title>My Personal Webpage</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+  <script src="app.js"></script>
+</head>
+<body ng-controller="MainController">
+
+  <header>
+    <h1>My Personal Webpage</h1>
+    <nav>
+      <button ng-click="setSection('about')">About Me</button>
+      <button ng-click="setSection('hobbies')">Hobbies</button>
+      <button ng-click="setSection('family')">Family</button>
+      <button ng-click="setSection('education')">Education</button>
+      <button ng-click="setSection('certificates')">Certificates</button
+    </nav>
+  </header>
+
+  <section ng-show="currentSection === 'about'">
+    <h2>About Me</h2>
+    <p>Name: {{ SIMANTA KALITA }}</p>
+    <p>Native Town: {{ RANGIA }}</p>
+    <p>Short Bio: {{ LIVE IN TARANI }}</p>
+  </section>
+
+  <section ng-show="currentSection === 'hobbies'">
+    <h2>My Hobbies</h2>
+    <ul>
+      <li ng-repeat="hobby in hobbies">SURFING INTERNET</li>
+      <li>WATCHING MOVIES</li>
+      <li>PLAYING GAMES</li>
+
+    </ul>
+  </section>
+
+  <section ng-show="currentSection === 'family'">
+    <h2>My Family</h2>
+    <ul>
+      <li ng-repeat="member in family">FATHER: ARUN KALTA</li>
+      <li>MOTHER: KAMALA KALITA</li>
+      <li>SISTER: PUJA KALITA</li>
+    </ul>
+  </section>
+
+  <section ng-show="currentSection === 'education'">
+    <h2>Education</h2>
+    <p>Schooling: SSN RANGIA</p>
+    <p>College: PRAGMATIC ACADEMY RANGIA</p>
+    <p>Qualifications: HSLC FROM SSN RANGIA, HS FROM PRAGMATIC ACADEMY RANGIA, BCA FROM ADTU</p>
+  </section>
+  <section ng-show="currentSection === 'certificates'">
+    <h2>Certificates & Rewards</h2>
+    <ul>
+      <li><a href="Coursera 2C754XDHCMX4.pdf" target="_blankCoursera 2C754XDHCMX4.pdf">Certificate 1</a></li>
+      <li><a href="Coursera UOPD2OAZINGP.pdf" target="Coursera UOPD2OAZINGP.pdf">Certificate 2</a></li>
+    </ul>
+  </section>
+
+
+</body>
+</html>
